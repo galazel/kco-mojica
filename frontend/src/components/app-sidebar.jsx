@@ -52,104 +52,103 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Dashboard",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Overview",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Sales Summary",
           url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
+        }
       ],
     },
     {
-      title: "Models",
+      title: "Products",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "All Products",
           url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+        }
       ],
     },
     {
-      title: "Documentation",
+      title: "Orders",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
+          title: "All Orders",
           url: "#",
         },
         {
-          title: "Get Started",
+          title: "Pending",
           url: "#",
         },
         {
-          title: "Tutorials",
+          title: "Shipped",
           url: "#",
         },
         {
-          title: "Changelog",
+          title: "Completed",
           url: "#",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "User Management",
       url: "#",
       icon: Settings2,
       items: [
         {
-          title: "General",
+          title: "Customers",
           url: "#",
         },
         {
-          title: "Team",
+          title: "Admin/Staff",
+          url: "#",
+        }
+      ],
+    },
+    {
+      title: "Analytics",
+      url: "#",
+      icon: Settings2,
+      items: [
+        {
+          title: "Sales Reports",
           url: "#",
         },
         {
-          title: "Billing",
+          title: "Product Performance",
           url: "#",
         },
         {
-          title: "Limits",
+          title: "Customer Insights",
           url: "#",
-        },
+        }
       ],
     },
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "Notifications",
       url: "#",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
+      name: "Messages",
       url: "#",
       icon: PieChart,
     },
     {
-      name: "Travel",
+      name: "History",
       url: "#",
       icon: Map,
     },
