@@ -17,7 +17,7 @@ import {
 
 function Header() {
   return (
-    <header className="sticky top-0 bg-green-800 flex justify-center">
+    <header className="sticky top-0 bg-green-950 flex justify-center">
       <div className="w-[50vw] flex justify-between items-center">
         <Link to="/">
           <img
