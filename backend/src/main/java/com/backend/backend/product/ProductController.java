@@ -1,9 +1,7 @@
-package com.backend.backend.controllers;
+package com.backend.backend.product;
 
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CustomerController {
-
-
+public class ProductController {
 }
