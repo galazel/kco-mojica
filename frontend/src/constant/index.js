@@ -6,3 +6,56 @@ export const products = [
   { image: "/5.png", name: "Barbecue", price: 120, stocks: 20 },
   { image: "/6.png", name: "Salt N Vinegar", price: 120, stocks: 20 },
 ];
+export const manages = [
+  {
+    title: "Dashboard",
+    subcategories: [
+      {
+        title: "Overview",
+        link: "",
+      },
+      {
+        title: "Sales Summary",
+        link: "",
+      },
+    ],
+  },
+  {
+    title: "Products",
+    link: "",
+  },
+  {
+    title: "Orders",
+    subcategories: [
+      {
+        title: "All Orders",
+        link: "",
+      },
+      {
+        title: "Pending",
+        link: "",
+      },
+      {
+        title: "Shipped",
+        link: "",
+      },
+      {
+        title: "Completed",
+        link: "",
+      },
+    ],
+  },
+  {
+    title: "Customers",
+    subcategories: [
+      {
+        title: "All Customers",
+        link: "",
+      },
+      {
+        title: "Reviews",
+        link: "",
+      },
+    ],
+  },
+];

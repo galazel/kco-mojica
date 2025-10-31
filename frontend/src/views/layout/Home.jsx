@@ -3,7 +3,7 @@ import React from "react";
 
 function Home({ children }) {
   return (
-    <main className="relative">
+    <main className="relative flex flex-col">
       <Header />
       {children}
       {/* footer */}

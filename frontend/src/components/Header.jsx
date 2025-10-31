@@ -17,12 +17,12 @@ import {
 
 function Header() {
   return (
-    <header className="sticky top-0 bg-green-950 flex justify-center">
+    <header className="sticky top-0 bg-green-950 flex justify-center w-full">
       <div className="w-[50vw] flex justify-between items-center">
         <Link to="/">
           <img
             src="/kco_logo.png  "
-            className="w-[8.6rem] cursor-pointer"
+            className="w-32 cursor-pointer"
             alt=""
           />
         </Link>
