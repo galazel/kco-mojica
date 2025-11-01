@@ -5,9 +5,15 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "customers")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,11 +24,13 @@ public class Customer {
     @NotNull(message = "First Name should not be empty")
     @NotBlank(message = "First Name is required")
     private String firstName;
-    @Size(min = 8,message = "Password should be at least 8 length")
-    @Pattern(regexp = "//d+//w+", message = "Password should have a small and large characters, digits, and symbols")
+    @Size(min = 8, message = "Password should be at least 8 characters")
+    @Pattern(
+            regexp = "(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*]).+",
+            message = "Password must include uppercase, lowercase, number, and symbol"
+    )
     private String password;
-    @Size(min = 11,message = "Contact number should have a length of 11")
-    @Pattern(regexp = "//d{11}", message = "A contact number should be in digit form")
+    @Size(min = 11, max = 11, message = "Contact number must be 11 digits")
     private String contactNumber;
     private String email;
 

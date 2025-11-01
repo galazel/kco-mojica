@@ -19,15 +19,16 @@ export default function HeaderAdmin() {
   return (
     <header className="sticky top-0 bg-green-950 flex justify-center w-full">
       <div className="w-[50vw] flex justify-between items-center text-white">
-        <Link to="/">
+        <Link to="/admin">
           <img src="/kco_logo.png  " className="w-32 cursor-pointer" alt="" />
         </Link>
         <div className="flex gap-5">
           <Link to="/products"> Products</Link>
           <Link to="/orders"> Orders</Link>
+          <Link to="/users"> Users</Link>
         </div>
         <div>
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger>
               <FontAwesomeIcon
                 icon={faUser}
@@ -41,7 +42,7 @@ export default function HeaderAdmin() {
                 <DropdownMenuItem>Login</DropdownMenuItem>
               </Link>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
       </div>
     </header>

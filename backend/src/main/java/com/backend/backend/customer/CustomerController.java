@@ -1,6 +1,7 @@
 package com.backend.backend.customer;
 
 import com.backend.backend.order.Order;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,8 @@ public class CustomerController {
         this.service = service;
     }
 
-    @PostMapping("/customer")
-    public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) {
+    @PostMapping("/add-customer")
+    public ResponseEntity<Customer> addCustomer(@Valid @RequestBody Customer customer) {
         Customer savedCustomer = service.addCustomer(customer);
         return savedCustomer != null ? new ResponseEntity<>(savedCustomer, HttpStatus.CREATED) : new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }

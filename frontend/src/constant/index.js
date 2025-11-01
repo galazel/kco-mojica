@@ -65,7 +65,7 @@ export async function getAllProducts() {
   return await axios.get("");
 }
 export async function addProduct({ product }) {
-  const product = await axios
+  const addProduct = await axios
     .post("/user", {
       product,
     })
@@ -83,10 +83,10 @@ export async function deleteProduct() {
 export async function getAllOrders() {
   return await axios.get("");
 }
-export async function addOrder({ product }) {
-  const product = await axios
+export async function addOrder({ order }) {
+  const addOrder = await axios
     .post("/user", {
-      product,
+      order,
     })
     .then(function (response) {
       console.log(response);

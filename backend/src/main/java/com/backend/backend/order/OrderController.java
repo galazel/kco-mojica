@@ -17,7 +17,7 @@ public class OrderController {
     {
         this.service = service;
     }
-    @PostMapping("/order")
+    @PostMapping("/add-order")
     public ResponseEntity<Order> addOrder(@RequestBody Order order)
     {
         Order savedOrder = service.addOrder(order);

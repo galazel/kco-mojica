@@ -7,6 +7,7 @@ import Signup from "./views/Signup";
 import Test from "./views/Test";
 import Products from "./views/Products";
 import Orders from "./views/Orders";
+import Users from "./views/Users";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/admin" element={<Test/>}></Route>
         <Route path="/products" element={<Products/>}></Route>
         <Route path="/orders" element={<Orders/>}></Route>
+        <Route path="/users" element={<Users/>}></Route>
     </Routes>
   </>;
 }
