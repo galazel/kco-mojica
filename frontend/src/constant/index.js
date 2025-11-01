@@ -1,3 +1,4 @@
+import axios from "axios";
 export const products = [
   { image: "/1.png", name: "Classic", price: 120, stocks: 20 },
   { image: "/2.png", name: "Spicy Cheese", price: 120, stocks: 20 },
@@ -59,3 +60,42 @@ export const manages = [
     ],
   },
 ];
+
+export async function getAllProducts() {
+  return await axios.get("");
+}
+export async function addProduct({ product }) {
+  const product = await axios
+    .post("/user", {
+      product,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+export async function deleteProduct() {
+  axios.delete();
+}
+
+export async function getAllOrders() {
+  return await axios.get("");
+}
+export async function addOrder({ product }) {
+  const product = await axios
+    .post("/user", {
+      product,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+export async function deleteOrder() {
+  axios.delete();
+}
+

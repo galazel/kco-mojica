@@ -26,5 +26,4 @@ public class Customer {
     private String contactNumber;
     private String email;
 
-
 }
