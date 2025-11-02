@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerId;
@@ -33,5 +33,4 @@ public class Customer {
     @Size(min = 11, max = 11, message = "Contact number must be 11 digits")
     private String contactNumber;
     private String email;
-
 }
