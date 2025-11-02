@@ -17,16 +17,19 @@ public class OrderController {
     {
         this.service = service;
     }
-    @PostMapping("/add-order")
-    public ResponseEntity<Order> addOrder(@RequestBody Order order)
+    @PostMapping
+    public ResponseEntity<Order> addOrder(@RequestParam int userId, @RequestParam int productId, int quantity)
     {
-        Order savedOrder = service.addOrder(order);
+        Order savedOrder = service.addOrder(userId, productId, quantity);
         return savedOrder != null ? new ResponseEntity<>(savedOrder,HttpStatus.CREATED) : new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
-    @GetMapping("/get-order")
-    public ResponseEntity<List<Order>> getOrder()
+    @GetMapping("/all-orders")
+    public ResponseEntity<List<Order>> getOrders()
     {
         List<Order> allOrders = service.getOrders();
+        allOrders.forEach(e -> {
+            System.out.println("User: "+e.getUser().getFirstName());
+        });
         return !allOrders.isEmpty() ? new ResponseEntity<>(allOrders,HttpStatus.OK) : new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 }
