@@ -3,6 +3,20 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addQuantity, reduceQuantity} from "@/features/cart/cartSlicer.js";
 import {Button} from "@/components/ui/button.jsx";
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
 
 export default function Checkout() {
     const data = useSelector((state) => state.cart.items);
@@ -65,7 +79,26 @@ export default function Checkout() {
                             </tr>
                             </tbody>
                         </table>
-                        <Button className="cursor-pointer p-5">Proceed to payment</Button>
+                        <Dialog>
+                            <form>
+                                <DialogTrigger asChild>
+                                    <Button variant="outline" className="w-full p-2 cursor-pointer bg-black text-white">Proceed to payment</Button>
+                                </DialogTrigger>
+                                <DialogContent className="sm:max-w-[425px]">
+                                    <DialogHeader>
+                                        <DialogTitle>Payment</DialogTitle>
+                                        <DialogDescription>
+                                           Thank you for purchasing our kangkong chips ;)
+                                        </DialogDescription>
+                                    </DialogHeader>
+                                    <DialogFooter>
+                                        <DialogClose asChild>
+                                            <Button variant="outline">Ok</Button>
+                                        </DialogClose>
+                                    </DialogFooter>
+                                </DialogContent>
+                            </form>
+                        </Dialog>
                     </div>
                 </div>
             </div>

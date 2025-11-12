@@ -36,7 +36,10 @@ function Header() {
               className="text-4xl cursor-pointer text-white"
             />
           </Link>
-
+            <Link to="/checkout">
+                {" "}
+                <FontAwesomeIcon icon={faBagShopping} className="text-4xl cursor-pointer text-white" />
+            </Link>
           <DropdownMenu>
             <DropdownMenuTrigger>
               <FontAwesomeIcon
