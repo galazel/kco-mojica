@@ -20,7 +20,7 @@ public class Product {
     private String description;
     private double price;
 
-    @ManyToMany(mappedBy = "products") // refers to Student.courses
+    @ManyToMany(mappedBy = "products")
     private Set<Order> orders = new HashSet<>();
 
 }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Lexend+Deca:wght@100..900&family=Lexend:wght@217&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light+Two&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "daisyui";
 
 @custom-variant dark (&:is(.dark *));
 
